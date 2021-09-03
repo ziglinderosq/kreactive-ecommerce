@@ -1,7 +1,31 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+    users: [
+        {
+            name: 'Ziglinder',
+            email: 'ziglinderosq@gmail.com',
+            password: bcrypt.hashSync('1234', 8),
+            isAdmin: true,
+            isSeller: true,
+            seller: {
+                name: 'Puma',
+                logo: '/images/logo1.png',
+                description: 'best seller',
+                rating: 4.5,
+                numReviews: 120,
+            },
+        },
+        {
+            name: 'Arturo',
+            email: 'arturogn@gmail.com',
+            password: bcrypt.hashSync('1234', 8),
+            isAdmin: false,
+            isSeller: false,
+        },
+    ],
     products: [
         {
-            _id: '1',
             name: 'Nike Slim Shirt',
             category: 'Shirts',
             image: '/images/p1.jpg',
@@ -13,7 +37,6 @@ const data = {
             description: 'high quality product',
         },
         {
-            _id: '2',
             name: 'Adidas Fit Shirt',
             category: 'Shirts',
             image: '/images/p2.jpg',
@@ -25,7 +48,6 @@ const data = {
             description: 'high quality product',
         },
         {
-            _id: '3',
             name: 'Lacoste Free Shirt',
             category: 'Shirts',
             image: '/images/p3.jpg',
@@ -37,7 +59,6 @@ const data = {
             description: 'high quality product',
         },
         {
-            _id: '4',
             name: 'Nike Slim Pant',
             category: 'Pants',
             image: '/images/p4.jpg',
@@ -49,7 +70,6 @@ const data = {
             description: 'high quality product',
         },
         {
-            _id: '5',
             name: 'Puma Slim Pant',
             category: 'Pants',
             image: '/images/p5.jpg',
@@ -61,7 +81,6 @@ const data = {
             description: 'high quality product',
         },
         {
-            _id: '6',
             name: 'Adidas Fit Pant',
             category: 'Pants',
             image: '/images/p6.jpg',
